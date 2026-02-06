@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-
+## AI GENERATED ##
 P_CHAPTER = re.compile(
     r"(?im)^\s*chapter\s+(\d+|[ivxlcdm]+)\b.*$"
 )
@@ -15,6 +15,7 @@ P_SECTION_WORDS = re.compile(
 )
 
 
+## AI GENERATED ##
 def find_splits(text: str):
     patterns = [P_CHAPTER, P_SECTION_WORDS, P_ROMAN_ALONE]
 

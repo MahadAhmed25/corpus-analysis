@@ -37,7 +37,8 @@ class LDATopicModeler:
         for tid in range(self.num_topics):
             topics[tid] = self.model.show_topic(tid, topn=topn)
         return topics
-
+    
+    ## AI GENERATED ##
     def average_topic_distribution(self, corpus, labels):
         sums = {"19th": [0.0] * self.num_topics, "20th": [0.0] * self.num_topics}
         counts = {"19th": 0, "20th": 0}
@@ -52,7 +53,8 @@ class LDATopicModeler:
             avgs[label] = [sums[label][i] / counts[label] for i in range(self.num_topics)]
 
         return avgs
-
+    
+    ## AI GENERATED ##
     def save_topics(self, out_dir, topn=25):
         out_dir = Path(out_dir)
         out_dir.mkdir(exist_ok=True)
@@ -70,6 +72,7 @@ class LDATopicModeler:
         (out_dir / "lda_topics.txt").write_text("\n".join(txt_lines), encoding="utf-8")
         (out_dir / "lda_topics.csv").write_text("\n".join(csv_lines), encoding="utf-8")
 
+    ## AI GENERATED ##
     def save_average_distributions(self, avg, out_dir):
         out_dir = Path(out_dir)
         out_dir.mkdir(exist_ok=True)
