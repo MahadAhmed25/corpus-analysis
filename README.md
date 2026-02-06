@@ -95,7 +95,7 @@ The preprocessing pipeline supports:
 - Removal of common character names
 - Removal of contraction fragments (e.g., t, ll, ve)
 
-These options are configurable through the Preprocessor class and were used to study their impact on downstream analysis.
+These options are configurable through the Preprocessor class.
 
 ## Attribution
 
