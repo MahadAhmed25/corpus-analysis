@@ -13,40 +13,23 @@ The analysis includes:
 - Naive Bayes word association analysis
 - Topic modeling using Latent Dirichlet Allocation (LDA)
 
-All core functionality is implemented as reusable classes in the src directory, while individual scripts in the project root serve as entry points for each experimental step.
-
-## Project Structure
-
-corpus-analysis/
-  chapters/                Segmented chapter-level documents
-  data/                    Raw downloaded novels
-  outputs/                 Generated outputs (LDA topics, distributions)
-
-  src/
-    Preprocessor.py        Tokenization and preprocessing logic
-    BagOfWords.py          BoW and TF-IDF feature extraction
-    NaiveBayes.py          Naive Bayes word-level analysis
-    TopicModeling.py       LDA topic modeling implementation
-
-  split_chapters.py        Splits novels into chapter documents
-  dataset_stats.py         Computes dataset statistics
-  run_bow_counts.py        Runs raw Bag-of-Words analysis
-  run_naive_bayes.py       Runs Naive Bayes analysis
-  run_topic_modeling.py    Runs LDA topic modeling
-  run_experiments.py       Runs preprocessing and representation experiments
-
-  corpus-analysis.pdf      Assignment report
-  README.md
-
 ## Setup
 
 Create and activate a virtual environment, then install dependencies.
 
+```
 python -m venv .venv
+```
+```
 source .venv/bin/activate    (Linux/macOS)
+```
+```
 .venv\Scripts\activate       (Windows)
+```
 
+```
 pip install numpy scikit-learn gensim
+```
 
 Ensure that raw novels are placed in the data directory before running the scripts.
 
@@ -56,31 +39,41 @@ All scripts should be run from the project root directory.
 
 ### Step 1: Split novels into chapters (only needed once)
 
+```
 python split_chapters.py
+```
 
 This populates the chapters/19th and chapters/20th directories.
 
 ### Step 2: Compute dataset statistics
 
+```
 python dataset_stats.py
+```
 
 Outputs the number of documents and average token counts per century.
 
 ### Step 3: Bag-of-Words analysis (raw counts)
 
+```
 python run_bow_counts.py
+```
 
 Prints the most frequent words for each century using raw counts.
 
 ### Step 4: Naive Bayes analysis (TF-IDF)
 
+```
 python run_naive_bayes.py
+```
 
 Computes log-likelihood ratios to identify words most strongly associated with each century.
 
 ### Step 5: Topic modeling with LDA
 
+```
 python run_topic_modeling.py
+```
 
 Generates topic modeling outputs in the outputs directory:
 - lda_topics.txt
@@ -89,7 +82,9 @@ Generates topic modeling outputs in the outputs directory:
 
 ### Step 6: Experimental comparisons
 
+```
 python run_experiments.py
+```
 
 Runs multiple preprocessing and feature representation configurations for comparison.
 
@@ -110,4 +105,5 @@ AI assistance was used during the development of this project in the following w
 - Assistance with designing and implementing split_chapters.py
 - Assistance with structuring and writing this README file
 
-All analysis decisions, experimental design, interpretation of results, and final report writing were performed by the author.
+Number of Prompts used: 12
+4.32g*12  = 51.84g
