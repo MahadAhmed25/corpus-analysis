@@ -18,12 +18,12 @@ def main():
     nb = NaiveBayesWordAnalyzer(tfidf_19, tfidf_20)
     s19, s20 = nb.llr_scores()
 
-    print("\nTop 10 words for 19th century:")
-    for w, s in nb.top_k(s19, k=10):
+    print("\nTop 25 words for 19th century:")
+    for w, s in nb.top_k(s19, k=25):
         print(w, round(s, 3))
 
-    print("\nTop 10 words for 20th century:")
-    for w, s in nb.top_k(s20, k=10):
+    print("\nTop 25 words for 20th century:")
+    for w, s in nb.top_k(s20, k=25):
         print(w, round(s, 3))
 
 
